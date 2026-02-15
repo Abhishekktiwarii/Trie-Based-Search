@@ -1,23 +1,5 @@
 # Web Scraper with Trie-Based Search Application
 
-## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [Testing with Postman](#testing-with-postman)
-- [Database Access](#database-access)
-- [Architecture & Design](#architecture--design)
-- [Testing](#testing)
-- [Troubleshooting](#troubleshooting)
-- [Advanced Features](#advanced-features)
-
----
-
 ## 🎯 Overview
 
 A production-ready Spring Boot application that scrapes real-time data from websites and provides efficient keyword search using a Trie data structure. Built with clean architecture, design patterns, and comprehensive testing.
@@ -1539,33 +1521,6 @@ public class SecurityConfig {
 
 ---
 
-## 📞 Support
-
-### Getting Help
-1. Check this README for solutions
-2. Review ARCHITECTURE.md for design details
-3. Check application logs
-4. Review JavaDoc in code
-
-### Common Questions
-
-**Q: Can I use a different database?**  
-A: Yes! Just update application.properties with your database connection details.
-
-**Q: How do I deploy to production?**  
-A: Build JAR with `mvn package`, then run with `java -jar target/webscraper-trie-app-1.0.0.jar`
-
-**Q: Can I scrape JavaScript-heavy websites?**  
-A: Current implementation uses JSoup (static HTML only). For JavaScript sites, integrate Selenium.
-
-**Q: How many URLs can I scrape at once?**  
-A: Recommended: 1-10 URLs per job. More URLs = longer processing time.
-
-**Q: Is the data persistent?**  
-A: By default, no (H2 in-memory). Change to file-based H2 or PostgreSQL for persistence.
-
----
-
 ## ✅ Checklist for Successful Testing
 
 Before submitting or demonstrating:
@@ -1600,11 +1555,7 @@ By studying this project, you'll learn:
 
 ---
 
-## 📄 License
 
-This project is created for educational/assignment purposes.
-
----
 
 ## 🙏 Acknowledgments
 
@@ -1616,11 +1567,3 @@ Built with:
 
 ---
 
-**For questions or issues, please refer to the troubleshooting section or check the application logs.**
-
----
-
-**Happy Testing! 🚀**
-
-Last Updated: 2024
-Version: 1.0.0
