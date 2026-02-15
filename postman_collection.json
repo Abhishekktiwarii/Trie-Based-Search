@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Web Scraper Trie API",
+    "description": "API collection for Web Scraper with Trie-based search",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "health"]
+        }
+      }
+    },
+    {
+      "name": "Initiate Scraping",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"urls\": [\n    \"https://en.wikipedia.org/wiki/Technology\",\n    \"https://en.wikipedia.org/wiki/Artificial_intelligence\"\n  ],\n  \"keywords\": [\"technology\", \"computer\", \"innovation\", \"software\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/scrape",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "scrape"]
+        }
+      }
+    },
+    {
+      "name": "Initiate Scheduled Scraping",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"urls\": [\n    \"https://example.com/news\"\n  ],\n  \"keywords\": [\"technology\", \"innovation\"],\n  \"schedule\": \"2024-11-01T10:00:00Z\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/scrape",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "scrape"]
+        }
+      }
+    },
+    {
+      "name": "Search Keywords",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prefix\": \"tech\",\n  \"limit\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "search"]
+        }
+      }
+    },
+    {
+      "name": "Get Job Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/status/{{jobId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "status", "{{jobId}}"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "jobId",
+      "value": "your-job-id-here"
+    }
+  ]
+}
